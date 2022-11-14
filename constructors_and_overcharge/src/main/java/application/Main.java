@@ -2,6 +2,7 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
+
 import entities.Product;
 
 public class Main {
@@ -9,20 +10,18 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Product product = new Product();
-
         // Scanning stuff
         System.out.println("Enter product data in the following requests.");
         System.out.print("Name: ");
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("Price: ");
-        product.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.print("Quantity: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+
+        Product product = new Product(name, price, quantity);
 
         System.out.println(product.toString());
-
-
 
 
     }
