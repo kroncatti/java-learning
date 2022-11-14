@@ -1,9 +1,9 @@
-package application;
+package main.java.application;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Product;
+import main.java.entities.Product;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,9 +20,8 @@ public class Main {
         int quantity = sc.nextInt();
 
         Product product = new Product(name, price, quantity);
+        product.setName("Computer");
 
         System.out.println(product.toString());
-
-
     }
 }
